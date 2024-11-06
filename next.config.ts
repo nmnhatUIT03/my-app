@@ -1,7 +1,26 @@
-import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        hostname: "images.unsplash.com",
+      },
+      {
+        hostname: "plus.unsplash.com",
+      },
+      {
+        hostname: "store.storeimages.cdn-apple.com",
+      },
+      {
+        hostname: "www.apple.com",
+      },
+    ],
+  },
+  experimental: {
+    serverActions: {
+      enabled: true,
+    },
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
